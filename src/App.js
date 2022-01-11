@@ -36,7 +36,7 @@ function App() {
       <ambientLight intensity={0.5}/>
       <spotLight position={[10,15,10]} angle={0.3}/>
       <Physics>
-        <Box size={[1,1,1]} invisible={true}></Box>
+        <Box size={[10,10,10]} invisible={true}></Box>
         {/* <Box size={[1,1,1]} invisible={false}></Box> */}
         <Plane/>
       </Physics>

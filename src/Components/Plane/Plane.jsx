@@ -10,7 +10,7 @@ function Plane(props) {
     const planeTexture = useLoader(TextureLoader, grass)
 
     return (
-        <mesh ref={ref} receiveShadow>
+        <mesh ref={ref} receiveShadow >
             <planeBufferGeometry attach='geometry' args={[100,100]} />
             <meshStandardMaterial map={planeTexture} attach='material' />
         </mesh>

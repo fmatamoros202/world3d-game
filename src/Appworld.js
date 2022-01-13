@@ -6,6 +6,7 @@ import { Physics } from '@react-three/cannon';
 
 import Plane from './Components/Plane/Plane';
 import Player from './Components/Player/Player';
+import Cube from './Components/Cube/Cube';
 
 
 
@@ -19,6 +20,7 @@ function Appworld() {
       <Physics gravity={[0,-30,0]}>
         <Player position={[0,3,10]}/>
         <Plane position={[0,0.5,0]}/>
+        <Cube receiveShadow position={[0,2,0]} type={'woodMap'}/>
       </Physics>
     </Canvas>
   );

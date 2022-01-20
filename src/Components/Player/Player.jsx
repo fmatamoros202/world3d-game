@@ -4,6 +4,7 @@ import { useThree, useFrame } from '@react-three/fiber'
 import { useKeyboardControls } from '../../Hooks/useKeyboardControls';
 // import { Vector3 } from 'three';
 import * as THREE from 'three';
+import  FPScontrols  from '../FPScontrols/FPScontrols.jsx';
 
 const SPEED = 0.5;
 
@@ -47,6 +48,7 @@ function Player(props) {
 
     return (
         <>
+           <FPScontrols />
            <mesh ref={ref} >
                {/* <sphereGeometry /> */}
             </mesh> 

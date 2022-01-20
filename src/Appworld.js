@@ -20,7 +20,7 @@ function Appworld() {
       <Physics gravity={[0,-30,0]}>
         <Plane position={[0,0.5,0]}/>
         <Player position={[0,3,10]}/>
-        <Cube receiveShadow position={[0,1,0]} type={'woodMap'}/>
+        <Cube receiveShadow position={[0,5,0]} type={'woodMap'} args={[2,2,2]}/>
       </Physics>
     </Canvas>
   );

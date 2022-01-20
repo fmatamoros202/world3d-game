@@ -19,7 +19,7 @@ function Cube({position, type, ...props}) {
                     key={index}
                 />
             })}
-            <boxBufferGeometry attach='geometry' />
+            <boxBufferGeometry attach='geometry' args={props.args}/>
         </mesh>
     );
 }

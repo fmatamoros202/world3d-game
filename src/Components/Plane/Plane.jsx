@@ -10,7 +10,7 @@ function Plane(props) {
     const planeTexture = useLoader(TextureLoader, grass);
     planeTexture.wrapS = RepeatWrapping;
     planeTexture.wrapT = RepeatWrapping;
-    planeTexture.repeat.set(50,50);
+    planeTexture.repeat.set(125,125);
 
     return (
         <mesh ref={ref} receiveShadow >

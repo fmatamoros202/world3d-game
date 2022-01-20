@@ -20,7 +20,7 @@ function textureByKey(key) {
     return keys[key];
 }
 
-export const useKeyboardControls = () =>{
+export const useKeyboardControls = () => {
     const [movement, setMovement] = useState({
         moveF: false,
         moveB: false,
@@ -29,17 +29,15 @@ export const useKeyboardControls = () =>{
         jump: false
     });
 
-    const setTexture = useStore((state)=>{
-        return state.setTexture
-    });
+    const setTexture = useStore((state)=> state.setTexture);
 
 
     useEffect(()=>{
 
-        const handleKeyDown = (e)=>{
+        const handleKeyDown = (e) => {
             // Movement key
             if (actionByKey(e.code)){
-                setMovement((state)=> ({ ...state, [actionByKey(e.code)]: true}))
+                setMovement((state)=> ({ ...state, [actionByKey(e.code)]: true}));
             }
             if (textureByKey(e.code)) {
                 setTexture(textureByKey(e.code));
@@ -55,7 +53,7 @@ export const useKeyboardControls = () =>{
 
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
-        return ()=>{
+        return () => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         }

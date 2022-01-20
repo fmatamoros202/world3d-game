@@ -18,9 +18,9 @@ function Appworld() {
       <ambientLight intensity={0.25}/>
       <pointLight castShadow intensity={0.7} position={[100,100,100]} />
       <Physics gravity={[0,-30,0]}>
-        <Player position={[0,3,10]}/>
         <Plane position={[0,0.5,0]}/>
-        <Cube receiveShadow position={[0,2,0]} type={'woodMap'}/>
+        <Player position={[0,3,10]}/>
+        <Cube receiveShadow position={[0,1,0]} type={'woodMap'}/>
       </Physics>
     </Canvas>
   );

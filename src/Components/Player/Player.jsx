@@ -43,6 +43,7 @@ function Player(props) {
 
         camera.position.copy(ref.current.position.add(direction));
 
+
         // console.log(camera.position)
     });
 

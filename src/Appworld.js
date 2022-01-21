@@ -10,12 +10,23 @@ import Player from './Components/Player/Player';
 import Cube from './Components/Cube/Cube';
 
 import { useStore } from './Hooks/useStore';
+import { useInterval } from './Hooks/useInterval';
 
 
 
 function Appworld() {
     
-    const cubes = useStore((state)=>{return state.cubes});
+    //Left This section out. This saves the game
+
+    const [cubes, saveWorld] = useStore((state)=>[
+        state.cubes,
+        // state.saveWorld,
+    ]);
+
+    // useInterval(()=>{
+    //     saveWorld(cubes)
+    //     console.log('saved')
+    // }, 10000);
 
   return (
     <>

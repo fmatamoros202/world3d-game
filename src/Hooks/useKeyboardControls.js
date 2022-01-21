@@ -16,6 +16,7 @@ function textureByKey(key) {
     const keys ={
         Digit1: 'grassMap',
         Digit2: 'woodMap',
+        Digit3: 'glassMap'
     };
     return keys[key];
 }

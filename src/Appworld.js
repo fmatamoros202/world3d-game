@@ -9,9 +9,14 @@ import Plane from './Components/Plane/Plane';
 import Player from './Components/Player/Player';
 import Cube from './Components/Cube/Cube';
 
+import { useStore } from './Hooks/useStore';
+
 
 
 function Appworld() {
+    
+    const cubes = useStore((state)=>{return state.cubes});
+
   return (
     <>
         <Reset />
@@ -23,7 +28,9 @@ function Appworld() {
         <Physics gravity={[0,-30,0]}>
             <Plane position={[0,0.5,0]}/>
             <Player position={[0,3,10]}/>
-            <Cube receiveShadow position={[0,5,0]} type={'woodMap'} args={[2,2,2]}/>
+            {cubes.map((cube)=>( 
+                <Cube receiveShadow position={cube.pos} texture={cube.texture} args={[2,2,2]}/>
+            ))}
         </Physics>
         </Canvas>
     </>

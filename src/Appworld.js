@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import {  Sky, OrbitControls } from '@react-three/drei';
 import { Physics } from '@react-three/cannon';
 import Reset from './Components/Reset/Reset';
+import Instructions from './Components/Instructions/Instructions';
 
 import Plane from './Components/Plane/Plane';
 import Player from './Components/Player/Player';
@@ -44,6 +45,7 @@ function Appworld() {
             ))}
         </Physics>
         </Canvas>
+        <Instructions/>
     </>
   );
 }
